@@ -1,0 +1,127 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Dark Theme Colors */
+:root {
+    --bg-color: #121212;
+    --primary-color: #ffffff;
+    --secondary-color: #bbbbbb;
+    --accent-color: #10a37f;
+    --card-bg: #1e1e1e;
+    --hover-bg: #242424;
+}
+
+/* Body Styling */
+body {
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+/* Header */
+.navbar {
+    background-color: var(--bg-color);
+    padding: 1rem 2rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid var(--hover-bg);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+/* About Section */
+.about-section {
+    text-align: center;
+    padding: 8rem 2rem;
+    background-color: var(--bg-color);
+    border-bottom: 1px solid var(--hover-bg);
+}
+
+.about-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.about-content p {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Experience Section */
+.experience-section {
+    padding: 4rem 2rem;
+    background-color: var(--bg-color);
+}
+
+.experience-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+}
+
+.experience-container {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.experience-card {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.experience-card:hover {
+    background-color: var(--hover-bg);
+    transform: translateY(-5px);
+}
+
+.experience-card h3 {
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.experience-card p {
+    font-size: 1rem;
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+.experience-card span {
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+}
