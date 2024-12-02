@@ -17,12 +17,22 @@
 
 /* Body Styling */
 body {
-    background-color: var(--bg-color);
-    color: var(--primary-color);
-    font-family: 'Arial', sans-serif;
+    background-color: var(--bg-color, #f4f4f4); /* Default background color */
+    color: var(--primary-color, #333);  /* Default text color */
+    font-family: 'Inter', sans-serif;  /* Use the Inter font */
     line-height: 1.6;
+    margin: 0;
+    padding: 0;
 }
 
+/* Footer styling */
+footer {
+    background-color: black;
+    color: white;
+    padding: 8px 0; /* Adjusted padding for top and bottom */
+    text-align: center;
+    font-size: 0.875rem; /* Equivalent to text-sm in Tailwind */
+}
 /* Header */
 .navbar {
     background-color: var(--bg-color);
@@ -124,4 +134,41 @@ body {
 .experience-card span {
     font-size: 0.9rem;
     color: var(--secondary-color);
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Navbar Animation */
+.navbar {
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar.scrolled {
+    background-color: #1e1e1e; /* Slightly lighter than the main background */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Fade-In Animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Card Animation */
+.experience-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
