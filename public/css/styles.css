@@ -218,9 +218,23 @@ body {
 
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+    gap: 20px; /* Spacing between the grid items */
     margin-top: 30px;
+    justify-items: center; /* Center tiles horizontally */
+    align-items: stretch; /* Stretch tiles vertically to match their content */
+}
+
+@media (max-width: 768px) {
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr); /* Two columns on medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .project-grid {
+        grid-template-columns: 1fr; /* One column on small screens */
+    }
 }
 
 .project-tile {
