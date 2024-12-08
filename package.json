@@ -3,12 +3,13 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "```plaintext\r portfolio-website/\r ├── public/\r │   ├── index.html\r │   ├── projects.html\r │   ├── resume-skills.html\r │   ├── css/\r │   │   └── styles.css\r │   └── js/\r │       └── app.js\r ├── server.js\r ├── package.json\r └── node_modules/\r ```",
   "dependencies": {
     "autoprefixer": "^10.4.20",
     "express": "^4.21.1",
