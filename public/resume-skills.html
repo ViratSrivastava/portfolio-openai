@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trade Agents - Project Details</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="navbar">
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="resume-skills.html">Resume & Skills</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <h1>Trade Agents</h1>
+        <img src="assets\project\trade-agents-banner.png" alt="Trade agents">
+    </section>
+
+    <!-- Description Section -->
+    <section class="project-details">
+        <h2>Overview</h2>
+        <p>Trade Agent is a repository of AI agent configurations designed for scalable deployment across multiple stocks. Developed by the Open Agents Organization, these configurations leverage temporal stock data to optimize predictive accuracy for each stock. Built with scalability in mind, the repository allows for deploying and managing thousands of agent configurations on cloud platforms and container orchestration systems like AWS, Kubernetes, and Docker.</p>
+
+        <h2>Tools and Technologies</h2>
+        <ul>
+            <li>Python</li>
+            <li>TensorFlow</li>
+            <li>Roboflow</li>
+        </ul>
+
+        <h2>Challenges and Solutions</h2>
+        <p>Dealing with overlapping structures and low-resolution imagery was a significant challenge. Advanced data preprocessing and YOLOv8 training addressed this issue effectively.</p>
+
+        <h2>Results</h2>
+        <p>Achieved a 95% accuracy in solar panel detection over diverse datasets.</p>
+
+        <h2>Visuals</h2>
+        <img src="images/project1-screenshot1.jpg" alt="Screenshot 1">
+        <img src="images/project1-screenshot2.jpg" alt="Screenshot 2">
+    </section>
+</body>
+</html>
+
+<!-- 
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    background-color: #121212;
+    color: #fff;
+
+    /* Flexbox for centering */
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    min-height: 100vh; /* Make body fill the entire viewport height */
+}
+
+/* Wrapper for all content */
+.project-details-wrapper {
+    width: 33%; /* Occupy approximately the center third of the page */
+    max-width: 800px; /* Optional max-width for larger screens */
+    text-align: center; /* Center text content */
+}
+
+/* Hero image and project images styling */
+.project-details img, 
+.hero-section img {
+    width: 100%; /* Responsive image scaling */
+    border-radius: 8px; /* Rounded corners */
+    margin: 20px 0; /* Space between images and content */
+-->
