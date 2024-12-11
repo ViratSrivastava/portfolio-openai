@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trade Agents - Project Details</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Profile - Virat Srivastava</title>
+    <link rel="stylesheet" href="css/profile.css">
 </head>
+
 <body>
     <!-- Header -->
     <header class="navbar">
@@ -18,63 +20,108 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero-section">
-        <h1>Trade Agents</h1>
-        <img src="assets\project\trade-agents-banner.png" alt="Trade agents">
-    </section>
+    <!-- Main Content -->
+    <main class="content-wrapper">
+        <section class="intro">
+            <h1>Virat Srivastava</h1>
+            <p>Pune, India | <a href="mailto:viratsrivastava.work@gmail.com">viratsrivastava.work@gmail.com</a> | <a
+                    href="#">LinkedIn</a> | <a href="#">GitHub</a></p>
+            <p><strong>Specialized in Artificial Intelligence & Machine Learning</strong></p>
+            <p><strong>AI/ML Engineer | GPU Computing Specialist | FinTech Enthusiast</strong></p>
+        </section>
 
-    <!-- Description Section -->
-    <section class="project-details">
-        <h2>Overview</h2>
-        <p>Trade Agent is a repository of AI agent configurations designed for scalable deployment across multiple stocks. Developed by the Open Agents Organization, these configurations leverage temporal stock data to optimize predictive accuracy for each stock. Built with scalability in mind, the repository allows for deploying and managing thousands of agent configurations on cloud platforms and container orchestration systems like AWS, Kubernetes, and Docker.</p>
+        <!-- Education -->
+        <section class="section">
+            <h2>Education</h2>
+            <ul>
+                <li>
+                    <strong>Integrated Masters of Technology in Computer Science and Engineering</strong>
+                    <br>Specialization in AI and ML | GPA: 7.0
+                    <br>VIT Bhopal University, Bhopal
+                </li>
+                <li>
+                    <strong>XIIth</strong> | 74.4%
+                    <br>Campion School, Arera Colony, Bhopal
+                </li>
+                <li>
+                    <strong>Xth</strong> | 64.4%
+                    <br>Campion School, Arera Colony, Bhopal
+                </li>
+            </ul>
+        </section>
 
-        <h2>Tools and Technologies</h2>
-        <ul>
-            <li>Python</li>
-            <li>TensorFlow</li>
-            <li>Roboflow</li>
-        </ul>
+        <!-- Skills -->
+        <section class="section">
+            <h2>Skills</h2>
+            <p><strong>Tech Stack:</strong> Machine Learning, Deep Learning, LLM, Generative AI, Deep RL, System Design,
+                Linux, Data Structures</p>
+            <p><strong>Languages:</strong> Python, C++, C, MySQL, PostgreSQL, CUDA, JavaScript, Docker, Kubernetes</p>
+        </section>
 
-        <h2>Challenges and Solutions</h2>
-        <p>Dealing with overlapping structures and low-resolution imagery was a significant challenge. Advanced data preprocessing and YOLOv8 training addressed this issue effectively.</p>
+        <!-- Work Experience -->
+        <section class="section">
+            <h2>Work Experience</h2>
+            <ul>
+                <li>
+                    <strong>Machine Learning Project Intern</strong> - National Remote Sensing Center, ISRO
+                    <em>September 2024 - October 2024 | Hyderabad, India</em>
+                    <ul>
+                        <li>Developed 3 Deep Object Detection models for urban spatial data</li>
+                        <li>Built pipelines for 3.5 million sq km data, achieving 97-99% accuracy</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>ML Developer</strong> - Omdena Mexico
+                    <em>July 2023 - June 2023 | Remote</em>
+                    <ul>
+                        <li>Delivered model training and pre-processing for 3,000 images</li>
+                        <li>Collaborated to improve model accuracy to 85%</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
 
-        <h2>Results</h2>
-        <p>Achieved a 95% accuracy in solar panel detection over diverse datasets.</p>
+        <!-- Projects -->
+        <section class="section">
+            <h2>Projects</h2>
+            <ul>
+                <li>
+                    <strong>Trade Agents</strong>
+                    Deployed 10,000+ trading agents using containerized AWS systems, achieving real-time trade decisions
+                    with 500ms latency.
+                </li>
+                <li>
+                    <strong>Screen Time Reduction App</strong>
+                    Built ML pipelines for facial detection to reduce toddler screen addiction, with 90% accuracy.
+                </li>
+                <li>
+                    <strong>Self Landing Rocket System</strong>
+                    Built a Deep RL pipeline integrating MATLAB simulations for corrective steering based on CNN model
+                    input.
+                </li>
+            </ul>
+        </section>
 
-        <h2>Visuals</h2>
-        <img src="images/project1-screenshot1.jpg" alt="Screenshot 1">
-        <img src="images/project1-screenshot2.jpg" alt="Screenshot 2">
-    </section>
+        <!-- Extra-Curricular Activities -->
+        <section class="section">
+            <h2>Extra-Curricular Activities</h2>
+            <ul>
+                <li>AI Club Secretary: Organized 12 events engaging 2,000+ students</li>
+                <li>Developed a Crop Fertilizer Recommendation Model, enhancing farm production by 24%</li>
+            </ul>
+        </section>
+
+        <!-- Resume Download -->
+        <section class="section">
+            <h2>Download Resume</h2>
+            <a href="assets/resume/virat-srivastava-resume.pdf" target="_blank" class="btn">Download PDF</a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Virat Srivastava</p>
+    </footer>
 </body>
+
 </html>
-
-<!-- 
-/* General Styling */
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    background-color: #121212;
-    color: #fff;
-
-    /* Flexbox for centering */
-    display: flex;
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
-    min-height: 100vh; /* Make body fill the entire viewport height */
-}
-
-/* Wrapper for all content */
-.project-details-wrapper {
-    width: 33%; /* Occupy approximately the center third of the page */
-    max-width: 800px; /* Optional max-width for larger screens */
-    text-align: center; /* Center text content */
-}
-
-/* Hero image and project images styling */
-.project-details img, 
-.hero-section img {
-    width: 100%; /* Responsive image scaling */
-    border-radius: 8px; /* Rounded corners */
-    margin: 20px 0; /* Space between images and content */
--->
