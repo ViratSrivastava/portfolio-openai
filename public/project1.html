@@ -28,44 +28,178 @@
                         <h1>Trade Agents</h1>
                     </section>
                     <div style="text-align: center;">
-                        <img src="assets/project/automated-drip-irrigation.png" alt="Trade Agents">
+                        <img src="assets/project/trade-agents-banner.png" alt="Trade Agents">
                     </div>
                 </section>
 
                 <section class="project-details">
                     <h2>Project Overview</h2>
                     <p>
-                        Trade Agents is a cutting-edge repository of AI-driven configurations tailored to facilitate intelligent decision-making in various trading environments. 
-                        It integrates machine learning models with real-time data analysis to predict trends and optimize trade strategies effectively. Additionally, this repository 
-                        includes models from the <a href="https://github.com/ViratSrivastava/Agro-AI" target="_blank" rel="noopener">Agro-AI project</a>, which provides crop and fertilizer 
-                        recommendations based on supervised learning algorithms and robust data analysis.
+                        The Trade Agent project aims to develop a scalable system comprising configurations of machine learning agents trained to predict stock trading trends. The central focus is on creating, testing, and deploying thousands of agents at scale, each specialized to analyze specific stock data. These agents will be optimized to produce the best possible trade predictions based on historical and real-time data. The project emphasizes scalability, containerized deployments, and continuous learning capabilities.
+                        It integrates machine learning models with real-time data analysis to predict trends and optimize trade strategies effectively. 
+                        <br>
+                        Additionally, this repository includes multiple agents of various configurations from the <a href="https://github.com/Open-System-AI/Trade-Agent" target="_blank" rel="noopener">Trade Agents</a>, which provides Stock trading but and sell recommendations based on supervised learning algorithms as well as from deep reinforced learning models and robust data analysis. Model performance insights ranging from profits and loss, actual and predicted pricing, Agent preformance matrix and ranking index data.
                     </p>
 
-                    <h2>Key Features</h2>
-                    <ul>
-                        <li>Data-driven decision-making using supervised and unsupervised algorithms.</li>
-                        <li>Real-time trend analysis and prediction models.</li>
-                        <li>Customizable agent configurations for diverse farming senarios and production gaols.</li>
-                        <li>Comprehensive visualization tools for model performance insights.</li>
-                    </ul>
+                    <p>
+                        <h2>Objectives</h2>
+
+                        <p>
+                            <li><strong>Agent Development</strong>: Build machine learning agents capable of stock trend prediction using temporal data.</li>
+                            <li><strong>Scale and Optimization</strong>: Deploy these agents in large numbers to identify top performers.</li>
+                            <li><strong>Continuous Learning</strong>: Enable agents to adapt and improve with new stock data.</li>
+                            <li><strong>Scalable Deployment</strong>: Utilize cloud platforms, container orchestration, and modern infrastructure to ensure robust and efficient deployment of agents.</li>
+                            <li><strong>Demonstrate Real-World Utility</strong>: Showcase a system capable of handling large-scale operations and delivering consistent, accurate predictions.</li>
+                        </p>
+
+                        <h2>Key Features</h2>
+                        <p>
+                            <li><strong>Multi-Agent Configurations</strong>: Each stock is analyzed by multiple agents with varying configurations (e.g., different models, hyperparameters, or input features).</li>
+                            <li><strong>Evaluation and Selection</strong>: Agents are tested and ranked based on their predictive performance, with top agents selected for further deployment.</li>
+                            <li><strong>Scalability</strong>: Use of Docker and Kubernetes to deploy tens of thousands of agents on cloud infrastructure such as AWS.</li>
+                            <li><strong>Continuous Adaptation</strong>: Agents are designed to update their models with new data, ensuring relevance in dynamic stock markets.</li>
+                            <li><strong>API Integration</strong>: Provide APIs for seamless interaction with agents, allowing users to input stock data and retrieve predictions.</li>
+                        </p>
+                        
+                        <p>
+                        <h2>Project Components</h2>
+
+                        <h4>1. Data Collection & Preprocessing</h4>
+                        <ul>
+                            <li><strong>Data Sources</strong>: Historical stock data sourced from <strong>Alpha Vantage</strong></li>
+                            <li><strong>Preprocessing Steps</strong>:
+                                <ul>
+                                    <li>Convert raw data into sequences suitable for time-series modeling.</li>
+                                    <li>Extract technical indicators (e.g., moving averages, RSI).</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <h4>2. Agent Development</h4>
+                        <ul>
+                            <li><strong>Models Used</strong>:
+                                <ul>
+                                    <li>Deep learning models like <strong>LSTM</strong>, <strong>GRU</strong>, and <strong>Transformer-based architectures</strong> for time-series forecasting.</li>
+                                    <li>Traditional models like <strong>XGBoost</strong> and <strong>Random Forest</strong> for experimentation.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Agent Configurations</strong>:
+                                <ul>
+                                    <li>Use configuration files (YAML/JSON) to define agent-specific parameters such as input features, look-back periods, and hyperparameters.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Backtesting</strong>:
+                                <ul>
+                                    <li>Implement backtesting to evaluate agent performance using historical data.</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <h4>3. Training and Evaluation</h4>
+                        <ul>
+                            <li>Train agents on 1–3 years of historical stock data.</li>
+                            <li>Evaluate agents using:
+                                <ul>
+                                    <li><strong>Prediction Metrics</strong>: Mean Squared Error (MSE), Mean Absolute Error (MAE).</li>
+                                    <li><strong>Trading Metrics</strong>: Sharpe Ratio, Profit Factor, and Maximum Drawdown.</li>
+                                </ul>
+                            </li>
+                            <li>Automate the training and evaluation pipeline to streamline the process for multiple agents and stocks.</li>
+                        </ul>
+
+                        <h4>4. Scalable Deployment</h4>
+                        <ul>
+                            <li><strong>Containerization</strong>:
+                                <ul>
+                                    <li>Use Docker to package each agent into a container, ensuring portability and consistency.</li>
+                                    <li>Create modular Dockerfiles for easy updates and maintenance.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Orchestration</strong>:
+                                <ul>
+                                    <li>Deploy agents using Kubernetes for large-scale management.</li>
+                                    <li>Write Kubernetes YAML files to define deployment configurations, such as pod scaling and resource allocation.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Cloud Infrastructure</strong>:
+                                <ul>
+                                    <li>Use AWS EC2 instances for initial testing.</li>
+                                    <li>Migrate to AWS EKS (Elastic Kubernetes Service) for production-scale deployments.</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <h4>5. API Development</h4>
+                        <ul>
+                            <li><strong>Framework</strong>: Use FastAPI or Flask to build RESTful APIs.</li>
+                            <li><strong>Capabilities</strong>:
+                                <ul>
+                                    <li>Accept stock data as input.</li>
+                                    <li>Trigger predictions from agents.</li>
+                                    <li>Return predictions and performance metrics to users.</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <h4>6. Continuous Learning</h4>
+                        <ul>
+                            <li>Develop pipelines to update agent models with new stock data daily or weekly.</li>
+                            <li>Store updated weights in a central repository (e.g., AWS S3) for seamless access during deployment.</li>
+                            <li>Monitor agent performance post-update to ensure consistent accuracy and relevance.</li>
+                        </ul>
+
+                        <h4>7. Monitoring and Optimization</h4>
+                        <ul>
+                            <li>Use tools like Prometheus and Grafana to:
+                                <ul>
+                                    <li>Track agent performance metrics.</li>
+                                    <li>Monitor system resource usage and scaling efficiency.</li>
+                                    <li>Optimize resource allocation and response times for better user experience.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </p>
+
+                    <h2>Expected Outcomes</h2>
+                        <p>
+                            <li>A scalable system capable of deploying thousands of agents for stock trading predictions.</li>
+                            <li>Top-performing agents identified for each stock based on predictive accuracy and trading performance.</li>
+                            <li>A continuous learning pipeline ensuring agents remain updated with new data.</li>
+                            <li>A robust API interface enabling real-time interaction with deployed agents.</li>
+                            <li>Demonstrated proficiency in deploying scalable ML sputions using Docker, Kubernetes, and AWS.</li>
+                        </p>
 
                     <h2>Technologies Used</h2>
+                    <h3>Technical Infrastructure</h3>
+
+                    <h4>Cloud and Orchestration</h4>
                     <ul>
-                        <li>Programming: Python</li>
-                        <li>Machine Learning Frameworks: TensorFlow, PyTorch</li>
-                        <li>Data Processing Tools: Pandas, NumPy</li>
-                        <li>Visualization: Matplotlib, Plotly</li>
-                        <li>Algorithms for Crop Recommendation: FCM (Fuzzy C-Means), PCR (Principal Component Regression), RF (Random Forest), SVR (Support Vector Regression)</li>
-                        <li>Algorithms for Fertilizer Recommendation: Linear Regression, Neural Networks, RF (Random Forest), SVR (Support Vector Regression)</li>
-                        <li>Version Control: Git, GitHub</li>
+                        <li>
+                            <strong>AWS</strong>:
+                            <ul>
+                                <li>EC2: Compute instances for running agents.</li>
+                                <li>S3: Storage for model weights and logs.</li>
+                                <li>EKS: Manage Kubernetes clusters for large-scale deployments.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Kubernetes</strong>:
+                            <ul>
+                                <li>Deploy agents as pods, enabling easy scaling and resource management.</li>
+                                <li>Use autoscaling to dynamically adjust the number of agents based on load.</li>
+                            </ul>
+                        </li>
                     </ul>
 
-                    <h2>Future Enhancements</h2>
-                    <p>
-                        The project aims to incorporate dynamic knowledgebase to predict better crop and fertilizer recommendations based on historical data and current trends. 
-                        Future iterations will also focus on improving scalability and response times. For Agro-AI, enhancements include expanding the database for 
-                        diverse regional crops and fertilizers, integrating weather prediction models, and adding real-time sensor data analysis for better recommendations.
-                    </p>                    
+                    <h4>Tools and Frameworks</h4>
+                    <ul>
+                        <li><strong>Machine Learning</strong>: TensorFlow, PyTorch, scikit-learn.</li>
+                        <li><strong>Containerization</strong>: Docker.</li>
+                        <li><strong>API Development</strong>: FastAPI, Flask.</li>
+                        <li><strong>Monitoring</strong>: Prometheus, Grafana.</li>
+                        <li><strong>Version Control</strong>: Git, GitHub.</li>
+                    </ul>                 
+                    GitHub repository: <a href="https://github.com/Open-System-AI/Trade-Agent" target="_blank" rel="noopener">Trade Agents</a>
                 </section>
             </div>
             <div class="right"></div>
