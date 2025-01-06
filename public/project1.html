@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trade Agents - Project Details</title>
-    <link rel="stylesheet" href="css/project.css">
-</head>
+    <link rel="stylesheet" href="css/project.css"></head>
 <body>
     <!-- Header -->
     <header class="navbar">
@@ -210,5 +209,13 @@
     <footer class="footer">
         <p>&copy; 2024 Trade Agents Project | Designed by Virat Srivastava</p>
     </footer>
+    
+    <!-- Add the component script with type="text/babel" -->
+    <script type="text/babel" src="js/LiveStockChart.jsx"></script>
+    
+    <!-- Add the mounting script -->
+    <script type="text/babel">
+        ReactDOM.createRoot(document.getElementById('stock-chart-root')).render(<LiveStockChart />);
+    </script>
 </body>
 </html>
