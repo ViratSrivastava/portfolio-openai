@@ -12,7 +12,7 @@
   "description": "```plaintext\r portfolio-website/\r ├── public/\r │   ├── index.html\r │   ├── projects.html\r │   ├── resume-skills.html\r │   ├── css/\r │   │   └── styles.css\r │   └── js/\r │       └── app.js\r ├── server.js\r ├── package.json\r └── node_modules/\r ```",
   "dependencies": {
     "autoprefixer": "^10.4.20",
-    "express": "^4.21.1",
+    "express": "^4.21.2",
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.15"
   },
