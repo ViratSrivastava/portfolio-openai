@@ -1,18 +1,34 @@
 # Portfolio Website Structure
 
 ```plaintext
-portfolio-website/
-├── public/
-│   ├── index.html
-│   ├── projects.html
-│   ├── resume-skills.html
-│   ├── css/
-│   │   └── styles.css
-│   └── js/
-│       └── app.js
-├── server.js
-├── package.json
-└── node_modules/
+.gitignore
+package.json
+public/
+    assets/
+        images/
+        project/
+        resume/
+    css/
+        profile.css
+        project.css
+        styles.css
+    index.html
+    js/
+        app.js
+        LiveStockChart.jsx
+        script.js
+    project1.html
+    project2.html
+    project3.html
+    project4.html
+    project5.html
+    project6.html
+    project7.html
+    projects.html
+    resume-skills.html
+readme.md
+server.js
+tailwind.config.js
 ```
 
 # Initialize the Project
