@@ -1,3 +1,4 @@
+<!-- This page is completed and requires no change -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,7 +26,7 @@
             <div class="center">
                 <section class="hero-section">
                     <section class="title-section">
-                        <h1>Trade Agents</h1>
+                        <h1>Optical Character Recognition</h1>
                     </section>
                     <div style="text-align: center;">
                         <img src="assets/project/optical-character-recognition-banner.png" alt="Trade Agents">
@@ -35,36 +36,104 @@
                 <section class="project-details">
                     <h2>Project Overview</h2>
                     <p>
-                        Trade Agents is a cutting-edge repository of AI-driven configurations tailored to facilitate intelligent decision-making in various trading environments. 
-                        It integrates machine learning models with real-time data analysis to predict trends and optimize trade strategies effectively. Additionally, this repository 
-                        includes multiple agents of various configurations from the <a href="https://github.com/Open-System-AI/Trade-Agent" target="_blank" rel="noopener">Trade Agents</a>, which provides Stock trading but and sell recommendations based on supervised learning algorithms as well as from deep reinforced learning modes and robust data analysis.
+                        OCR-DNN: Optical Character Recognition using Deep Neural Networks
+                    </p>
+                    <p>
+                        OCR-DNN is a deep learning-based Optical Character Recognition (OCR) system designed to recognize alphanumeric characters from both RGB and binary image inputs. The model leverages a deep neural network (DNN) architecture with convolutional layers to extract features from images and classify them into 62 possible outputs (letters and digits).
                     </p>
 
                     <h2>Key Features</h2>
                     <ul>
-                        <li>Data-driven decision-making using supervised and unsupervised algorithms.</li>
-                        <li>Real-time trend analysis and prediction models.</li>
-                        <li>Customizable agent configurations for diverse farming senarios and production gaols.</li>
-                        <li>Comprehensive visualization tools for model performance insights.</li>
+                        <li>Features</li>
+                        <li>Dual Input Architecture: The model accepts both RGB and binary image inputs, processing each through separate convolutional layers.</li>
+                        <li>Convolutional Neural Networks (CNNs): Uses CNNs to extract hierarchical features from images.</li>
+                        <li>Fully Connected Layers: After feature extraction, the model passes through dense layers with dropout for robust classification.</li>
+                        <li>62 Output Classes: The system can recognize uppercase and lowercase letters along with digits (0-9).</li>
                     </ul>
-
+                    <div style="text-align: center;">
+                        <img src="assets/project/Model-ocr.svg" alt="OCR Model">
+                    </div>
                     <h2>Technologies Used</h2>
                     <ul>
-                        <li>Programming: Python</li>
-                        <li>Machine Learning Frameworks: TensorFlow, PyTorch</li>
+                        <li>Programming: Python, C++ executable</li>
+                        <li>Machine Learning Frameworks: TensorFlow, Keras</li>
                         <li>Data Processing Tools: Pandas, NumPy</li>
                         <li>Visualization: Matplotlib, Plotly</li>
-                        <li>Algorithms for Crop Recommendation: FCM (Fuzzy C-Means), PCR (Principal Component Regression), RF (Random Forest), SVR (Support Vector Regression)</li>
-                        <li>Algorithms for Fertilizer Recommendation: Linear Regression, Neural Networks, RF (Random Forest), SVR (Support Vector Regression)</li>
                         <li>Version Control: Git, GitHub</li>
                     </ul>
-
-                    <h2>Future Enhancements</h2>
+                    <h2>Performance</h2>
                     <p>
-                        The project aims to incorporate dynamic knowledgebase to predict better crop and fertilizer recommendations based on historical data and current trends. 
-                        Future iterations will also focus on improving scalability and response times. For Agro-AI, enhancements include expanding the database for 
-                        diverse regional crops and fertilizers, integrating weather prediction models, and adding real-time sensor data analysis for better recommendations.
-                    </p>                    
+                        Model structure has a variable performance of 70-88% with respect to the type of data it is trained on. Training data belong to the following categories:
+                    </p>
+                    <pre>
+                        ┏━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━┓
+                        ┃ Layer (type)        ┃ Output Shape      ┃    Param # ┃ Connected to      ┃
+                        ┡━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━┩
+                        │ input_layer_4       │ (None, 28, 28, 3) │          0 │ -                 │
+                        │ (InputLayer)        │                   │            │                   │
+                        ├─────────────────────┼───────────────────┼────────────┼───────────────────┤
+                        │ input_layer_5       │ (None, 28, 28, 1) │          0 │ -                 │
+                        │ (InputLayer)        │                   │            │                   │
+                        ├─────────────────────┼───────────────────┼────────────┼───────────────────┤
+                        │ conv2d_12 (Conv2D)  │ (None, 28, 28,    │      1,792 │ input_layer_4[0]… │
+                        │                     │ 64)               │            │                   │
+                        ├─────────────────────┼───────────────────┼────────────┼───────────────────┤
+                        │ conv2d_15 (Conv2D)  │ (None, 28, 28,    │        640 │ input_layer_5[0]… │
+                        │                     │ 64)               │            │                   │
+                        ├─────────────────────┼───────────────────┼────────────┼───────────────────┤
+                        │ max_pooling2d_12    │ (None, 14, 14,    │          0 │ conv2d_12[0][0]   │
+                        │ (MaxPooling2D)      │ 64)               │            │                   │
+                        ├─────────────────────┼───────────────────┼────────────┼───────────────────┤
+                        │ max_pooling2d_15    │ (None, 14, 14,    │          0 │ conv2d_15[0][0]   │
+                        │ (MaxPooling2D)      │ 64)               │            │                   │
+                        ├─────────────────────┼───────────────────┼────────────┼───────────────────┤
+                        │ conv2d_13 (Conv2D)  │ (None, 14, 14,    │     73,856 │ max_pooling2d_12… │
+                        │                     │ 128)              │            │                   │
+                        ├─────────────────────┼───────────────────┼────────────┼───────────────────┤
+                        │ conv2d_16 (Conv2D)  │ (None, 14, 14,    │     73,856 │ max_pooling2d_15… │
+                        │                     │ 128)              │            │                   │
+                        ├─────────────────────┼───────────────────┼────────────┼───────────────────┤
+                        │ max_pooling2d_13    │ (None, 7, 7, 128) │          0 │ conv2d_13[0][0]   │
+                        │ (MaxPooling2D)      │                   │            │                   │
+                        ├─────────────────────┼───────────────────┼────────────┼───────────────────┤
+                        │ max_pooling2d_16    │ (None, 7, 7, 128) │          0 │ conv2d_16[0][0]   │
+                        │ (MaxPooling2D)      │                   │            │                   │
+                        ├─────────────────────┼───────────────────┼────────────┼───────────────────┤
+                        │ conv2d_14 (Conv2D)  │ (None, 7, 7, 256) │    295,168 │ max_pooling2d_13… │
+                        ├─────────────────────┼───────────────────┼────────────┼───────────────────┤
+                        │ conv2d_17 (Conv2D)  │ (None, 7, 7, 256) │    295,168 │ max_pooling2d_16… │
+                        ├─────────────────────┼───────────────────┼────────────┼───────────────────┤
+                        │ max_pooling2d_14    │ (None, 3, 3, 256) │          0 │ conv2d_14[0][0]   │
+                        │ (MaxPooling2D)      │                   │            │                   │
+                        ├─────────────────────┼───────────────────┼────────────┼───────────────────┤
+                        │ max_pooling2d_17    │ (None, 3, 3, 256) │          0 │ conv2d_17[0][0]   │
+                        │ (MaxPooling2D)      │                   │            │                   │
+                        ├─────────────────────┼───────────────────┼────────────┼───────────────────┤
+                        │ flatten_4 (Flatten) │ (None, 2304)      │          0 │ max_pooling2d_14… │
+                        ├─────────────────────┼───────────────────┼────────────┼───────────────────┤
+                        │ flatten_5 (Flatten) │ (None, 2304)      │          0 │ max_pooling2d_17… │
+                        ├─────────────────────┼───────────────────┼────────────┼───────────────────┤
+                        │ concatenate_2       │ (None, 4608)      │          0 │ flatten_4[0][0],  │
+                        │ (Concatenate)       │                   │            │ flatten_5[0][0]   │
+                        ├─────────────────────┼───────────────────┼────────────┼───────────────────┤
+                        │ dense_6 (Dense)     │ (None, 256)       │  1,179,904 │ concatenate_2[0]… │
+                        ├─────────────────────┼───────────────────┼────────────┼───────────────────┤
+                        │ dropout_4 (Dropout) │ (None, 256)       │          0 │ dense_6[0][0]     │
+                        ├─────────────────────┼───────────────────┼────────────┼───────────────────┤
+                        │ dense_7 (Dense)     │ (None, 128)       │     32,896 │ dropout_4[0][0]   │
+                        ├─────────────────────┼───────────────────┼────────────┼───────────────────┤
+                        │ dropout_5 (Dropout) │ (None, 128)       │          0 │ dense_7[0][0]     │
+                        ├─────────────────────┼───────────────────┼────────────┼───────────────────┤
+                        └─────────────────────┴───────────────────┴────────────┴───────────────────┘
+                    </pre>
+                    <ul>
+                    <ul>
+                        <li>Handwritten Characters: Upper case and Lower case with numbers with both RGB and Binary Images of the characters</li>
+                        <li>Digital Character: Upper case and Lower case with numbers with Binary Images of the characters</li>
+                        <li>Multi Font Digital Character: Upper case and Lower case with numbers with Binary Images of the characters in multiple fonts</li>
+                        <li>Handwritten Text: Upper case and Lower case with numbers with both RGB and Binary Images of the Text</li>
+                        <li>Digital Text: Upper case and Lower case with numbers with Binary Images of the Text</li>
+                    </ul>                
                 </section>
             </div>
             <div class="right"></div>
@@ -73,7 +142,7 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <p>&copy; 2024 Trade Agents Project | Designed by Virat Srivastava</p>
+        <p>&copy; 2025 OCR Project | Designed by Virat Srivastava</p>
     </footer>
 </body>
 </html>
