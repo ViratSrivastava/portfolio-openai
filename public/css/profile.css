@@ -195,3 +195,14 @@ p, ul {
         height: 160px;
     }
 }
+/* Page Wrapper for Transition */
+.page-wrapper {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out; /* Smooth fade effect */
+}
+
+/* Hidden State */
+.page-wrapper.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
