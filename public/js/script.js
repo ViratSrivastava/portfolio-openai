@@ -11,6 +11,23 @@ window.addEventListener("scroll", () => {
 // Fade-in effect on scroll
 const fadeElements = document.querySelectorAll(".fade-in");
 
+// Debounce function to improve scroll performance
+const debounce = (func, wait = 20, immediate = true) => {
+    let timeout;
+    return function () {
+        const context = this, args = arguments;
+        const later = () => {
+            timeout = null;
+            if (!immediate) func.apply(context, args);
+        };
+        const callNow = immediate && !timeout;
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+        if (callNow) func.apply(context, args);
+    };
+};
+
+// Handle fade-in effect
 const handleFadeIn = () => {
     fadeElements.forEach((element) => {
         const rect = element.getBoundingClientRect();
@@ -20,5 +37,6 @@ const handleFadeIn = () => {
     });
 };
 
-window.addEventListener("scroll", handleFadeIn);
+// Add event listeners for optimized performance
+window.addEventListener("scroll", debounce(handleFadeIn));
 window.addEventListener("load", handleFadeIn); // Trigger on load
